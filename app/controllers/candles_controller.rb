@@ -13,4 +13,22 @@ class CandlesController < ApplicationController
     )
     render :show
   end 
+
+  def show 
+    @candle = Candle.find_by(id: params[:id])
+    render :show
+  end 
+
+  def update 
+    @candle = Candle.find_by(id: params[:id])
+    @candle.update(
+      name: params[:name] || @candle.name, 
+      color: params[:color] || candle.color, 
+      smell: params[:smell] || candle.smell,
+    )
+    render :show
+  end 
 end
+
+
+

@@ -5,5 +5,12 @@ Rails.application.routes.draw do
   # create 
 
   post "/candles" => "candles#create"
-  
+
+  # show 
+
+  get "/candles" => "candles#show"
+
+
+  patch "/candles/:id" => "candles#update"
+
 end

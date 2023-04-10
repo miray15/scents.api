@@ -28,6 +28,12 @@ class CandlesController < ApplicationController
     )
     render :show
   end 
+
+  def destroy 
+    @candle = Candle.find_by(id: params[:id])
+    @candle.destroy
+    render json: {message: "the candle has been successfully destroyed"}
+  end 
 end
 
 

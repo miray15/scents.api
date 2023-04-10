@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
   patch "/candles/:id" => "candles#update"
 
+  delete "/candles/:id" => "candles#destroy"
+  
 end

@@ -5,4 +5,12 @@ class CandlesController < ApplicationController
     render :index 
   end 
 
+  def create 
+    @candle = Candle.create(
+      name: params[:name], 
+      color: params[:color], 
+      smell: params[:smell]
+    )
+    render :show
+  end 
 end
